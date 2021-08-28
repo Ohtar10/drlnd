@@ -1,0 +1,6 @@
+torch==1.8
+jupyter
+jupyterlab
+matplotlib
+seaborn
+unityagents==0.4.0
