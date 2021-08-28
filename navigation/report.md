@@ -90,3 +90,4 @@ DQN is a powerful algorithm capable of solving simple and well defined tasks. In
 - Human-level control through deep reinforcement
 learning: http://www.nature.com/articles/nature14236
 - Deep Reinforcement Learning with Double Q-learning: http://arxiv.org/abs/1509.06461
+- Plotting RL results - [reddit thread](https://www.reddit.com/r/reinforcementlearning/comments/gnvlcp/way_to_plot_goodlooking_rewards_plots/)
