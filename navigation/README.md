@@ -39,17 +39,13 @@ Download the environment from one of the links below. You need only select the e
 Once downloaded, place the zip file at the same level of the `Navigation.ipynb` notebook and extract the content there.
 
 ### Runtime Environment
-Create a conda/python environment with `python=3.6`
+Create a conda/python environment from the provided `environment.yaml` file
 ```bash
-conda create -n navigation python=3.6
+conda env create -f environment.yaml
 # activate the environment
 conda activate navigation
 ```
-Install the dependencies
-```bash
-pip install -f requirements.txt
-```
-Install `mlagents==0.9.0`
+Install `mlagents==0.9.0` via pip
 **Note:** This needs to be installed separately from the requirements as unityagents and this version of mlagents make conflict at the moment of creation of this repo.
 ```bash
 pip install mlagents==0.9.0

@@ -1,0 +1,14 @@
+name: drlnd-navigation
+channels:
+  - defaults
+dependencies:
+  - python=3.6
+  - pip
+  - pip:
+     - torch==1.7.1
+     - jupyter
+     - jupyterlab
+     - matplotlib
+     - seaborn
+     - unityagents==0.4.0
+     - tqdm
