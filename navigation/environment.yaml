@@ -11,4 +11,5 @@ dependencies:
      - matplotlib
      - seaborn
      - unityagents==0.4.0
+    #  - mlagents==0.9.0
      - tqdm
