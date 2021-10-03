@@ -4,3 +4,4 @@ This repo contains my solutions to the projects of the Udacity's [Deep Reinforce
 
 ## Index
 - [Navigation](./navigation/)
+- [Continuous Control](./continuous-control/)

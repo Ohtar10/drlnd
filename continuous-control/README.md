@@ -1,8 +1,17 @@
 # RL - Continuous Control task with DDPG
 
-<div style="text-align:center">
-<img src="./media/trained-ddqn.gif" alt="Training..."
-	title="A cute kitten" width="450" height="250" />
+<div style="width: 100%; display: table;">
+    <div style="text-align:center; display: table-row;">
+        <div style="display: table-cell; padding-right: 10px;"> <p>Random Agent</p>
+		<img src="./media/random-agent.gif" alt="Trained"
+			title="Continuous Control - Random Agent"/> 
+		</div>
+        <div style="display: table-cell;"> 
+		<p>Trained Agent</p>
+		<img src="./media/trained-agent.gif" alt="Trained"
+			title="Continous Control - Trained Agent"/>		
+		</div>
+    </div>
 </div>
 
 ## Description
@@ -62,10 +71,5 @@ jupyter-lab
 ```
 Open the notebook in this repo and explore.
 
-### :robot: I'm still training... :muscle: 
-<div style="text-align:center">
-<img src="./media/training-dqn.gif" alt="Training..."
-	title="A cute kitten" width="150" height="100" />
-</div>
 
 
