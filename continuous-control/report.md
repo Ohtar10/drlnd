@@ -1,7 +1,11 @@
 # DDPG - Continous Control - Project Report
 
 This solution impleents a Deep Deterministic Policy Gradient (DDPG) algorithm [
- [Silver et al. 2014](https://proceedings.mlr.press/v32/silver14.pdf), [Lillicrap et al. 2016](https://arxiv.org/abs/1509.02971)] to solve a continpus control task in which a 2 joint arm is tasked to reach and follow a target.
+ [Silver et al. 2014](https://proceedings.mlr.press/v32/silver14.pdf), [Lillicrap et al. 2016](https://arxiv.org/abs/1509.02971)] to solve a continpus control task in which a 2 joint arm is tasked to reach and follow a target. DDPG is a policy gradient algorithm, meaning, it's ultimate goal is to directly learn the behaviour policy (the actor), the actor is then represented as a neural network. This is the opposite to Q-Learning which instead learns the $Q_\pi(s,a)$ (Q-Values) of each state-action pair and then apply an $\epsilon$-greedy policy to select actions. However, in DDPG, we have an Actor-Critic process in which a second network is used to calculate the $V_\pi(s)$ state value (the critic), which is used to evaluate how good an action selected by the actor is. Both networks are trained at the same time, from training experiences collected from the agent.
+
+ The gradient of the actor (the policy) is calculated by evaluating the selected actions from given states against the critic values from the same states. The gradient of the critic is a loss function between the Q-values of the critic in the current state-actions and the Q-values under the same states but the actions predicted by the actor. By decoupling the Q-values calculation and the action selection, we aim to create a stable learning process.
+
+ Despite the Actor-Critic process, this algorithm resembles the classic Q-learning because of the use of a replay buffer to learn from past experiences and still calculating Q-values. However, as stated in the beginning, the main purpose of this algorithm is to learn the policy, the Q-values are calculated just during training and to evaluate the actions selected by the policy network, which provides better learning stability.
 
 ## Network definition
 
@@ -47,9 +51,13 @@ This project run one experiment with hyper-parameters as follow:
 ## Results
 ### DDPG Training output
 ```bash
- 1%|          | 74/10000 [14:27<32:19:13, 11.72s/it, Avg. Score=30.08]
+1%|          | 101/10000 [17:37<28:46:55, 10.47s/it, Avg. Score=30.35]
 ```
-Using the 20x agents environment, the task is solved in 74 episodes. This takes a bit longer for x1 agent as it needs more steps to get more samples.
+Using the 20x agents environment, the task is solved in 101 episodes. This takes a bit longer for x1 agent as it needs more steps to get more samples to learn from. To achieve this result I struggled for a while with different implementations of the algorithm and different hyper-parameters. 
+
+In the end, I discovered, by trial & error, that setting the same learning rates for both the actor and the critic to `5-e4` yield the best results, notice this is in contrast to the example learning rates from the course which most of the time recommended smaller learning rates for the actor. 
+
+Another significant hyper-parameter change was the $\sigma$ value for the noise, the default value was `0.2` which in this case provoked too erratic behaviour of the arm leading it to barely get meaningful samples to learn from.
 
 <div style="text-align:center">
 <img src="./media/rewards-training.png" alt="Vanilla DQN"
