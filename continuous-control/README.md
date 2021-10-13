@@ -14,7 +14,7 @@
     </div>
 </div>
 
-## Description
+## Instroduction
 This repo contains my submission to the second project in the Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893). Here you will find a Notebook with the implementation to solve the task and how to use it.
 
 ## Task description
