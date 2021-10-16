@@ -11,6 +11,8 @@ dependencies:
      - jupyterlab
      - matplotlib
      - seaborn
+     - tensorboardX
      - unityagents==0.4.0
+     - protobuf
     #  - mlagents==0.9.0
      - tqdm
