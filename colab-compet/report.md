@@ -1,14 +1,9 @@
 [//]: # (Image References)
 
-[random-agent]: media/random-agent.gif "Random Agent"
-[trained-agent]: media/trained-agent.gif "Trained Agent"
 [score-progress]: media/score-progress.png "Score Progress"
 [rewards-training]: media/rewards-training.png "Rewards Training"
 
 # MADDPG - Collaboration & Competition - Project Report
-
-Random Agent: ![Random Agent][random-agent]
-Trained Agent: ![Trained Agent][trained-agent]
 
 This solution impleents a Multi-Agent Deep Deterministic Policy Gradient (MADDPG) algorithm [
  [Lowe et al. 2017](http://arxiv.org/abs/1706.02275), to solve a multi-agent collaborative task in which a two agents (tennis rackets) need to keep the ball in the air, bouncing it to each other. MADDPG is an expansion of DDPG which adapts the later to work with multi agent environments. Multi-agent environments are a special and difficult kind of tasks which can be collaborative (as in this case) or competitive, the agents need to be aware not only about the environment but the other agents as well, and since they are also learning, this converts the environment in non-stationary environment, making the learning progress much harder. 

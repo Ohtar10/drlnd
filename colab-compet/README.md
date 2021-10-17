@@ -1,4 +1,12 @@
+[//]: # (Image References)
+
+[random-agent]: media/random-agent.gif "Random Agent"
+[trained-agent]: media/trained-agent.gif "Trained Agent"
+
 # RL - Multi Agent task with MADDPG
+
+Random Agent: ![Random Agent][random-agent]
+Trained Agent: ![Trained Agent][trained-agent]
 
 ## Introduction
 This repo contains my submission to the third project in the Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893). Here you will find a Notebook with the implementation to solve the task and how to use it.
